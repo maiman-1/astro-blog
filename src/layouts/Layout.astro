@@ -1,51 +1,27 @@
 ---
+import Header from '../components/Header.astro';
+import BaseHead from '../components/baseHead.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
+
 interface Props {
 	title: string;
+	description: string
 }
 
-const { title } = Astro.props;
+const { title = SITE_TITLE, description=SITE_DESCRIPTION} = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<BaseHead title={title} description={description}></BaseHead>
 	</head>
-	<body>
-		<slot />
-	</body>
+	<main>
+		<div class="drawer-content bg-base-100">
+			<Header></Header>
+		<div class="md:flex md:justify-center">
+	</main>
+	
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
+
+
