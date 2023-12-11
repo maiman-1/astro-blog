@@ -5,88 +5,28 @@ import abs_icon from '../asset/favicon.png'
 ---
 
 <header class="main-header">
-    <a href="/astro-blog" id="header-title-card">
-        <Image src={abs_icon} id="header_icon" alt="A logo with the letters ABS in it" />
-        <h1>Aiman's Blog</h1>
-    </a>
-    <div class="navigation-bar-div">
+    <!--Toggle Sidebar on and off -->
+    <div
+    class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+    >
+        <div class="navbar">
+            <div class="navbar-start">
+            <label for="my-drawer" class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"
+                ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </label>
+            </div>
+            <div class="navbar-center">
+                <!--Icon -->
+                <a href="/astro-blog" id="header-title-card btn btn-ghost normal-case text-xl">
+                    <div>Aiman's Blog</div>
+                </a>
+        </div>
     </div>
+
+    
 </header>
 
 
 <style>
-
-h1 {
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-}
-a#header-title-card{
-    color: rgb(41, 58, 46);
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(245, 245, 245, 0.75);
-    height: 100%;
-    padding-right: 3vw;
-    
-}
-header.main-header{
-    background-image: url("/astro-blog/bakground_header.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    border: 1vh rgba(var(--accent-light)) solid;
-    height: 10vh;
-    font-size:2vw;
-}
-
-div.navigation-bar-div {
-    background-color: rgba(29, 27, 27, 0.5);
-    display: flex;
-    flex-grow: 1;
-    height: 100%;
-}
-
-ul.navigation-bar{
-    display: flex;
-    list-style-type: none;
-    margin:0;
-    height: 100%;
-    align-items: center;
-    padding-left: 0;
-}
-
-a.navigation-item {
-    text-decoration: none;
-    color:black;
-}
-
-li.navigation-item {
-    float:left;
-    border-left: 0.1em solid black;
-    margin:0;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    padding-right: 1vw;
-}
-
-li.navigation-item:hover {
-    background-color: rgba(110, 111, 112, 0.5);
-}
-
-img#header_icon {
-    width: auto;
-    object-fit: contain;
-    height:100%;
-}
-</style>
