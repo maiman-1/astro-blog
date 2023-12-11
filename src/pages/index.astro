@@ -4,6 +4,14 @@ import Card from '../components/Card.astro'
 ---
 
 <Layout title="Aiman's Blog" description='Main Page'>
+	<!--Introduction part -->
+	<div class="web-intro-text drawer-content bg-base-100">
+		<h2 class="web-intro-text">Hey there! 👋</h2>
+		<p>
+			Welcome to my website. I'm Aiman. Here, we dive into some tech stuff that I am interested in. Ready for some cool content? Let's explore together! 🚀
+		</p>
+	</div>
+	<!--Navigation links -->
 	<div class="drawer-content bg-base-100">
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -25,11 +33,10 @@ import Card from '../components/Card.astro'
 <style>
 	div.drawer-content {
 		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
+		padding: 0vw 10vw 2vw 10vw;
+		width: 80vw;
 		color: white;
-		font-size: 20px;
+		font-size: 1rem;
 		line-height: 1.6;
 	}
 	.astro-a {
@@ -78,5 +85,8 @@ import Card from '../components/Card.astro'
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	h2.web-intro-text {
+
 	}
 </style>
