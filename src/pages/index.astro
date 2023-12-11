@@ -4,25 +4,26 @@ import Card from '../components/Card.astro'
 ---
 
 <Layout title="Aiman's Blog" description='Main Page'>
+	<div class="drawer-content bg-base-100">
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/astro-blog/about/"
+				title="About Me"
+				body="Curious to know more about the person behind the words? Click here to get acquainted!"
+			/>
+			<Card
+				href="/astro-blog/blog/"
+				title="Blogs"
+				body="Click here for the latest updates about me, my adventures, and the stories I'm excited to share. "
+			/>
+		</ul>
+	<div class="md:flex md:justify-center">
 </Layout>
 
-<main>
-	<ul role="list" class="link-card-grid">
-		<Card
-			href="/astro-blog/about/"
-			title="About Me"
-			body="Curious to know more about the person behind the words? Click here to get acquainted!"
-		/>
-		<Card
-			href="/astro-blog/blog/"
-			title="Blogs"
-			body="Click here for the latest updates about me, my adventures, and the stories I'm excited to share. "
-		/>
-	</ul>
-</main>
+
 
 <style>
-	main {
+	div.drawer-content {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;

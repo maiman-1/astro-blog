@@ -16,11 +16,13 @@ const { title = SITE_TITLE, description=SITE_DESCRIPTION} = Astro.props;
 	<head>
 		<BaseHead title={title} description={description}></BaseHead>
 	</head>
-	<main>
-		<div class="drawer-content bg-base-100">
-			<Header></Header>
-		<div class="md:flex md:justify-center">
-	</main>
+	<body>
+		<Header></Header>
+		
+		<slot>
+			Default Text
+		</slot>
+	</body>
 	
 </html>
 

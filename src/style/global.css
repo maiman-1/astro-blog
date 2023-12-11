@@ -26,3 +26,7 @@ code {
         Courier New,
         monospace;
 }
+
+body {
+    margin: 0;
+}
