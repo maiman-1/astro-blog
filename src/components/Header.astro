@@ -1,14 +1,21 @@
 ---
 import { Image } from "astro:assets";
+import {
+  BackgroundImage,
+  ImageSupportDetection,
+} from "astro-imagetools/components";
+import background_header from '../asset/bakground_header.jpeg'
 import abs_icon from '../asset/favicon.png'
 ---
 
+<header class="main-header">
+    <div class="bg-image"></div>
+    <a href="/astro-blog" id="header-title-card">
+        <Image src={abs_icon} id="header_icon" alt="A logo with the letters ABS in it" />
+        <h1>Aiman's Blog</span></h1>
+    </a>
+</header>
 
-<a href="/astro-blog" id="title-card">
-    <Image src={abs_icon} id="header_icon" alt="A logo with the letters ABS in it" />
-    <h1>Aiman's Blog</span></h1>
-
-</a>
 
 <style>
 main {
@@ -67,10 +74,8 @@ h1 {
     gap: 2rem;
     padding: 0;
 }
-a#title-card{
-    background-color: teal;
-    border: 1rem rgba(var(--accent-light), 25%) solid;
-    color: white;
+a#header-title-card{
+    color: rgb(41, 58, 46);
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -78,6 +83,20 @@ a#title-card{
     align-content: center;
     align-items: center;
     justify-content: center;
+    
+}
+header.main-header{
+    background-image: url("/astro-blog/src/asset/bakground_header.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: 1rem rgba(var(--accent-light), 25%) solid;
+    width: 100%;
 }
 
 img#header_icon {
