@@ -1,7 +1,139 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+import { Image } from 'astro:assets';
+import HeadShot from "../asset/twitter_profile.jpg";
 ---
 <Layout title="About Me" description='About Me' sideBarActiveItemID='about'>
+    <div>
+        <!--Title -->
+        <div class="text-3xl">About Me</div>
+        <!--The first section will be a headshot and a short summary text -->
+        <div id="summary_intro" class="flex flex-row flex-wrap my-8">
+            <!--Headshot -->
+            <div class="avatar mx-5 w-64 flex-wrap">
+                <div class="rounded-full">
+                    <Image 
+                        src={HeadShot}
+                        alt='My headshot'
+                    ></Image>
+                </div>
+                <!--Little Badges -->
+                <div class="w-64 h-16">
+                    <div class="badge">HTML</div>
+                    <div class="badge badge-neutral">Python</div>
+                    <div class="badge badge-primary">Javascript</div>
+                    <div class="badge badge-secondary">Front End</div>
+                    <div class="badge badge-accent">Database</div>
+                    <div class="badge badge-ghost">AI</div>
+                </div>
+                
+            </div>
+
+            <!--Introduce myself -->
+            <div class="lg:w-1/2 w-11/12">
+                <div class="text-xl">
+                    Welcome to my blog site! I am
+                </div>
+                <div class="lg:text-3xl text-2xl whitespace-nowrap">
+                    Muhammad Aiman Shamsiemon
+                </div>
+                <div class="lg:text-2xl text-xl">
+                    Software Engineer and Life-Long Learner
+                </div>
+                <div class="text-justify text-l">
+                    I am a Software Engineering graduate from Monash University Malaysia with a passion in coding, and ReactJS. I am passionate to learn about coding, and website development. I have another blog before this that I have taken down. It was built using Jekyll but, I wanted a blog built on ReactJS and AstroJS fits that requirement like a glove.
+                </div>
+            </div>
+        </div>
+        <!--End of Section -->
+
+         <!--The next section will the education built using the Timeline from daisyui -->
+         <div id="timeline_education" class="my-8">
+            <!--title -->
+            <div class="text-3xl">
+                Education
+            </div>
+
+            <!--Timeline -->
+            <div class="self-center">
+                <ul class="timeline  timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <div class="timeline-start md:text-end mb-10">
+                        <time class="font-mono italic">2023</time>
+                        <div class="text-lg font-black">Monash University Malaysia</div>
+                        Bachelor of Software Engineering (Hons.) <br>
+                        3.83
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <div class="timeline-end mb-10">
+                        <time class="font-mono italic">2019</time>
+                        <div class="text-lg font-black">Sunway College</div>
+                        Monash University Foundation Year
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <div class="timeline-start md:text-end mb-10">
+                        <time class="font-mono italic">2017</time>
+                        <div class="text-lg font-black">Permodalan Nasional Berhad</div>
+                        Awarded Foreign Local University Scholarship Award
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <div class="timeline-end mb-10">
+                        <time class="font-mono italic">2017</time>
+                        <div class="text-lg font-black">MRSM Pengkalan Chepa</div>
+                        Sijil Pelajaran Malaysia <br>
+                        8A+ 1A
+                        </div>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <!--End of section -->
+
+        <div id="Experience">
+            <!--title -->
+            <div class="text-3xl">
+                Experience
+            </div>
+
+            <!--Timeline -->
+            <div class="self-center">
+                <ul class="timeline  timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <div class="timeline-end mb-10">
+                            <time class="font-mono italic">Nov. 2022 - Feb. 2023</time>
+                            <div class="text-lg font-black">WonderPod Sdn. Bhd.</div>
+                            System Research (Trainee) <br>
+                            3.83
+                        </div>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
 </Layout>
