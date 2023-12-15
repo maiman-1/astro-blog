@@ -1,0 +1,16 @@
+---
+layout: "./../../layouts/PostLayout.astro"
+title:  "FIT2101 Demo"
+pubDate:   2021-08-26 00:00:00 +0800
+description: 'A project I did which was an intro on the Scrum Process. Very Scuffed'
+author: 'Muhammad Aiman Shamsiemon'
+image:
+    url: "/astro-blog/favicon.png"
+    alt: 'The full Astro logo.'
+categories: ["Monash", "Y2S1"]
+---
+I've uploaded two videos which demo my fit2101 project on [my youtube channel](https://www.youtube.com/channel/UCLVV9bUGGNv2NGIRijf7xhw).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EIWtXdPrhFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sFgGdRMrUnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

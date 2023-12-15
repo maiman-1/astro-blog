@@ -10,6 +10,7 @@ interface Props {
 	title: string;
 	description: string
 	sideBarActiveItemID: string
+	includeSidebar?: Boolean
 }
 
 const { title = SITE_TITLE, description=SITE_DESCRIPTION, sideBarActiveItemID, includeSidebar = true} = Astro.props;

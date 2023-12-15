@@ -1,10 +1,11 @@
 ---
+layout: "./../../layouts/PostLayout.astro"
 title:  "First Jekyll Post (Now first Astro Post)"
 pubDate:   2021-02-21 13:20:09 +0800
 description: 'This is the first post of my new Astro blog.'
 author: 'Muhammad Aiman Shamsiemon'
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    url: "/astro-blog/favicon.png"
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---

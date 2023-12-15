@@ -1,9 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import PostCard from '../components/PostCard.astro';
+
+//import all posts with .md
+const allPosts = await Astro.glob("./posts/*.md");
+console.log("~ AllPosts", allPosts)
 ---
 <Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
     <ul>
-        <li><a href="../posts/post-1/">Post 1</a></li>
+        {
+            allPosts.map((post) => (
+            <PostCard 
+                frontmatter={post.frontmatter}
+                post_url={post.url}
+            >
+            </PostCard>
+            ))
+        }
+        
     </ul>
 </Layout>

@@ -1,12 +1,13 @@
 ---
+layout: "./../../layouts/PostLayout.astro"
 title:  "ENG1003 Projects"
-pubDate:   2021-02-24
-tags: ["Monash", "Software Engineering", "learning in public", "Y1S2"]
+pubDate:   2021-02-14 13:20:09 +0800
 author: "Muhammad Aiman Shamsiemon"
 description: "After learning some Astro, I couldn't stop!"
 image:
-    url: "https://docs.astro.build/assets/arc.webp"
+    url: "/astro-blog/favicon.png"
     alt: "Thumbnail of Astro arcs."
+tags: ["Monash", "Software Engineering", "learning in public", "Y1S2"]
 ---
 One of the units I was enrolled in in the second semester period of my study was
 a very interesting unit about web applications. This unit was of course titled
