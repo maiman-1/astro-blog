@@ -1,17 +1,24 @@
 ---
 import Layout from "./Layout.astro";
-import PostCard from "../components/PostCard.astro";
+
 import {slugify, formatDate} from "./../js/utils"
 const {frontmatter} = Astro.props
 
-const {title, pubDate, description, author, image, tags} = frontmatter
+const {title, pubDate, description, author, image, tags, draft} = frontmatter
 const {url, alt} = image;
 ---
 
 <Layout title={title} description={description} sideBarActiveItemID="article">
     <div class="post-shell">
+        <!--breadcrumb here-->
+        <div class="text-sm breadcrumbs">
+            <ul>
+              <li><a href="/astro-blog/blog">Blog</a></li> 
+              <li><a>{title}</a></li> 
+            </ul>
+          </div>
         <!--Hero for the title part -->
-        <div class="hero bg-neutral-content mb-10 text-black">
+        <div class="hero bbg-neutral shadow-xl mb-10 ring-1 ring-white ring-inset">
             <div class="hero-content flex-col lg:flex-row">
                 <img src={url} class="max-w-sm rounded-lg" />
                 <div>
@@ -22,11 +29,18 @@ const {url, alt} = image;
             </div>
         </div>
         <!--content here! -->
-        <div class="post-content">
+        <div class="prose post-content max-w-none">
             <div class="content space-y-4">
                 <slot></slot>
             </div>
         </div>
+
+        <style>
+            h1{
+                font-size: 3rem;
+            }
+        </style>
     </div>
     
 </Layout>
+

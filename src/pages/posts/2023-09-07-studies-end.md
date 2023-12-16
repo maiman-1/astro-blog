@@ -5,9 +5,10 @@ pubDate:   2023-09-07 00:00:00 +0800
 description: 'I have spent 4 years of my life in this institution, Monash University Malaysia. During two, or even three of those years in my studies, I have spent them online due to the pandemic. It interesting that this blog itself was started during the pandemic.'
 author: 'Muhammad Aiman Shamsiemon'
 image:
-    url: "/astro-blog/favicon.png"
+    url: "/astro-blog/src/asset/grad.jpg"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y4S2"]
+draft: false
 ---
 I have spent 4 years of my life in this institution, Monash University Malaysia. During two, or even three of those years in my studies, I have spent them online due to the pandemic. It interesting that this blog itself was started during the pandemic. At that time, the blog was a simpler, with no paginate, with just this index page. Over time, I evolve it to firstly include my resume then, I added the grade page to make communicating with my supervising scholars easier. That was never accomplish. It seems that my supervisor weren't a fan of looking at my blog and would prefer I tell them my result each time.
 
@@ -30,7 +31,7 @@ The topic that my team picked fo the Final Year Project is titled "Secure Coding
 
 The research was done under the helm of [HumaniSE lab from Monash University Australia](https://www.monash.edu/it/humanise-lab/about-us/people), and under the supervision of Dr. Anuradha Madugalla. I think it stands for Humanity in Software Engineering. It is a lab focused on doing social science research within the field and culture surrounding Software Engineering.
 
-<img src="../../asset/fyp_process.png" alt="our fyp process" width="100%">
+<img src="/astro-blog/src/asset/fyp_process.png" alt="our fyp process" width="100%">
 
 The image above shows the process that we took for the Final Year Project. The main point is to focus on gathering data from working software developers on their background, and their general thoughts. Then, we identify different themes from the qualitative data, and quantify the data to the themes. We take the quantitative data and perform correlation analysis to find any trends between how the background, and traits of the developers can influence their thoughts and approach on secure coding.
 

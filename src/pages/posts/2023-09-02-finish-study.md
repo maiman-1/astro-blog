@@ -5,9 +5,10 @@ pubDate:   2023-09-02 00:00:00 +0800
 description: 'It has been a while. So many has changed in the world of IT in the last year after the release of the some of the amazing Language Processing Artificial intelligence, like the Chat Generative Pre-trained Transformer (GPT). I have been busy with so many live changes during the past year -  I have moved and I did my internship. Most of all.... I finished my study without updating this site. OOPS!'
 author: 'Muhammad Aiman Shamsiemon'
 image:
-    url: "/astro-blog/favicon.png"
+    url: "/astro-blog/src/asset/elvenmage.jfif"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y4S2"]
+draft: false
 ---
 It has been a while. So many has changed in the world of IT in the last year after the release of the some of the amazing Language Processing Artificial intelligence, like the Chat Generative Pre-trained Transformer (GPT). I've been busy with so many live changes during the past year -  I've moved and I did my internship. Most of all.... I finished my study without updating this site. OOPS!
 

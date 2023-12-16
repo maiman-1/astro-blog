@@ -3,14 +3,14 @@ import { Image } from "astro:assets";
 import {slugify, formatDate} from "./../js/utils"
 const { frontmatter, post_url } = Astro.props;
 //extract frontmatter
-const {title, pubDate, description, author, image, tags} = frontmatter
+const {title, pubDate, description, author, image, tags, draft} = frontmatter
 const {url, alt} = image;
 
 //console.log("~post", url)
 ---
-<div class="card lg:card-side bg-neutral-content text-black shadow-xl my-10">
-    <figure><Image src={url} alt={alt} width={200} height={125}/></figure>
-    <div class="card-body">
+<div class="card lg:card-side bg-neutral shadow-xl my-10 ring-1 ring-white ring-inset">
+    <figure class="w-1/2 p-10"><Image src={url} alt={alt} width={200} height={125}/></figure>
+    <div class="card-body lg:w-1/2">
 		<div class="card-title">
 			<a href={post_url}><h2 class="card-title">{title}</h2></a>
 			{

@@ -8,6 +8,7 @@ image:
     url: "/astro-blog/favicon.png"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y2S1"]
+draft: false
 
 ---
 In the second year of my studies in **Software Engineering**, I had to take on

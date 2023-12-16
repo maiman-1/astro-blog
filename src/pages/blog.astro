@@ -3,14 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import PostCard from '../components/PostCard.astro';
 
+//utils
+import { formatBlogPosts } from '../js/utils';
+
 //import all posts with .md
 const allPosts = await Astro.glob("./posts/*.md");
-console.log("~ AllPosts", allPosts)
+const formattedPosts = formatBlogPosts(allPosts)
+//console.log("~ AllPosts", allPosts)
 ---
 <Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
     <ul>
         {
-            allPosts.map((post) => (
+            formattedPosts.map((post) => (
             <PostCard 
                 frontmatter={post.frontmatter}
                 post_url={post.url}

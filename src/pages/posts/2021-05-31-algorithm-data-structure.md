@@ -8,6 +8,7 @@ image:
     url: "/astro-blog/favicon.png"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y2S2"]
+draft: false
 ---
 I think the subject that most students dread to learn, at least among my friends, is algorithm. **FIT2004: Algorithm and Data Structure** requires more practical knowledge and experience to pass unlike most other units.
 

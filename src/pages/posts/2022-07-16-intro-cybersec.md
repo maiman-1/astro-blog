@@ -8,6 +8,7 @@ image:
     url: "/astro-blog/favicon.png"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y3S2"]
+draft: false
 ---
 This semester, I took a course on cybersecurity. It's a  theoretical unit and there's not much to say about it. If anyone is interested in taking cybersecurity, know that there is a lot of maths involved in this subject, particularly on the topic of number theory. This is because you're using some property of maths to create a "lock" to say the least.
 

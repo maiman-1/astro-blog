@@ -1,13 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro'
+
+import PostCard from '../components/PostCard.astro';
+
+//utils
+import { formatBlogPosts } from '../js/utils';
+
+//import all posts with .md and take the latest 3
+const allPosts = await Astro.glob("./posts/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {limit:4})
+//console.log(formattedPosts)
 ---
 
 <Layout title="Aiman's Blog" description='Main Page' sideBarActiveItemID='home'>
 	<!--Introduction part -->
-	<div class="web-intro-text my-8">
+	<div class="web-intro-text my-8 text-grey">
 		<div class="text-xl py-1">Hello there 👋</div>
-		<div class="text-5xl font-bold">I'm Muhammad Aiman Bin Shamsiemon</div>
+		<div class="text-5xl font-bold text-primary">I'm Muhammad Aiman Bin Shamsiemon</div>
 		<div class="text-3xl">Software Engineer and Life-long Learner</div>
 
 		<div class="text-xl my-8 text-justify">
@@ -16,7 +26,8 @@ import Card from '../components/Card.astro'
 	</div>
 
 	<!--Navigation links -->
-	<div class="drawer-content bg-base-100">
+	<div class="drawer-content bg-base-100 my-10">
+		<h2 class="text-2xl text-primary">Navigate</h2>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="/astro-blog/about/"
@@ -30,13 +41,26 @@ import Card from '../components/Card.astro'
 			/>
 		</ul>
 	</div>
+
+	<!--Newest Blog Posts! -->
+	<div class="drawer-content bg-base-100">
+		<h2 class="text-2xl text-primary">Newest Posts</h2>
+		<ul role="list" class="grid grid-cols-1 gap-4">
+			{formattedPosts.map((post)=>(
+				<Card
+					href={post.url}
+					title={post.frontmatter.title}
+					body= {post.frontmatter.description}
+				/>
+			))}
+		</ul>
+	</div>
 </Layout>
 
 
 
 <style>
 	div.drawer-content {
-		margin: auto;
 		color: white;
 		font-size: 1rem;
 		line-height: 1.6;

@@ -7,7 +7,7 @@ description: "After learning some Astro, I couldn't stop!"
 image:
     url: "/astro-blog/favicon.png"
     alt: "Thumbnail of Astro arcs."
-tags: ["Monash", "Software Engineering", "learning in public", "Y1S2"]
+tags: ["Monash", "SoftEng", "Y1S2"]
 ---
 One of the units I was enrolled in in the second semester period of my study was
 a very interesting unit about web applications. This unit was of course titled
