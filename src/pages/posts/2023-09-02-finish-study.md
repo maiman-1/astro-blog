@@ -5,14 +5,14 @@ pubDate:   2023-09-02 00:00:00 +0800
 description: 'It has been a while. So many has changed in the world of IT in the last year after the release of the some of the amazing Language Processing Artificial intelligence, like the Chat Generative Pre-trained Transformer (GPT). I have been busy with so many live changes during the past year -  I have moved and I did my internship. Most of all.... I finished my study without updating this site. OOPS!'
 author: 'Muhammad Aiman Shamsiemon'
 image:
-    url: "/astro-blog/src/asset/elvenmage.jfif"
+    url: "/src/asset/elvenmage.jfif"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y4S2"]
 draft: false
 ---
 It has been a while. So many has changed in the world of IT in the last year after the release of the some of the amazing Language Processing Artificial intelligence, like the Chat Generative Pre-trained Transformer (GPT). I've been busy with so many live changes during the past year -  I've moved and I did my internship. Most of all.... I finished my study without updating this site. OOPS!
 
-<img src="/astro-blog/src/asset/elvenmage.jfif" alt="ehe blue haired mage" width="200px" height="100px">
+<img src="/src/asset/elvenmage.jfif" alt="ehe blue haired mage" width="200px" height="100px">
 
 Anyways... I want to try something new with this page. People have been clamoring on about AIs and I wanted to try adding that. Sounds interesting and fun. That's what matters in life and that's what I want to focus this site on from now on. Sharing stuff that interests me.
 
@@ -32,13 +32,13 @@ Actually did some comtemplating on whether or not I should update this site to a
 Future plans for this site include, not only posts on my studies but also posts on my hobbies, my travels, etc. So, I'm not only going to be focused on what I learned in my degree but, what I've been up to and also, what I've learned. One thing I've always want to create for this site is the ability to sort it by category and also the ability to search for specific. With the amount of posts I have now, it doesn't seem like it's worth it. Also, longer posts. I want to try to make sure each of my post is up to 500 words at least. Why? No reason. I just want the page to stretch longer and make it look better.
 
 # Testing AI and My Thoughts on AIs
-<img src="/astro-blog/src/asset/elvenmagewriting.jfif" alt="kawaii elven mage be writing" width="200px" height="100px">
+<img src="/src/asset/elvenmagewriting.jfif" alt="kawaii elven mage be writing" width="200px" height="100px">
 
 The above image is created using Bing with the prompt: "Can you make the mages sit in front of a laptop and write?". AIs have always have a problems with hands. This girl's hand is no different and it is messed up. That is one long arm and she is literally a slay queen writing backwards. A true girl boss. Keep up the good work!
 
 Also, I noticed that her ears are not exactly elven. They're more like Evee's ears from Pokemon. This could be considered somewhat of a failure for the image generation engine.
 
-<img src="/astro-blog/src/asset/elvendressing.webp" alt="kawaii elven mage be writing" width="200px" height="100px">
+<img src="/src/asset/elvendressing.webp" alt="kawaii elven mage be writing" width="200px" height="100px">
 
 This one, on the other hand, is using Character.ai. Specifically the 2389 AD director. Character.ai image generation is not as impressive as Bing's. Bing uses one of the most leaders in AI image generation, DALL-E and I don't really see any info on what Character.AI uses. It must be a custom engine since even Stable Diffusion can create a more realistic looking image than the one we see now.
 
