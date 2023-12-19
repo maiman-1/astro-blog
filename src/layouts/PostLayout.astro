@@ -18,10 +18,10 @@ const {url, alt} = image;
             </ul>
           </div>
         <!--Hero for the title part -->
-        <div class="hero bbg-neutral shadow-xl mb-10 ring-1 ring-white ring-inset">
+        <div class="hero h-1/2 bg-neutral shadow-xl mb-10 ring-1 ring-white ring-inset">
             <div class="hero-content flex-col lg:flex-row">
-                <img src={url} class="max-w-sm rounded-lg" />
-                <div>
+                <img src={url} class="object-scale-down p-4 md:w-1/2 rounded-lg" />
+                <div class="md:w-1/2">
                     <h1 class="text-5xl font-bold">{title}</h1>
                     <p class="py-6">by <a href="/astro-blog/about/">{slugify(author)}</a></p>
                     <p class="py-6">{formatDate(pubDate)}</a></p>

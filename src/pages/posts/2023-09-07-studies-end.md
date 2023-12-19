@@ -6,7 +6,7 @@ pubDate:   2023-09-07 00:00:00 +0800
 description: 'I have spent 4 years of my life in this institution, Monash University Malaysia. During two, or even three of those years in my studies, I have spent them online due to the pandemic. It interesting that this blog itself was started during the pandemic.'
 author: 'Muhammad Aiman Shamsiemon'
 image:
-    url: "/astro-blog/public/assets/grad.jpg"
+    url: "/astro-blog/src/asset/grad.jpg"
     alt: 'The full Astro logo.'
 tags: ["Monash", "Y4S2"]
 draft: false
