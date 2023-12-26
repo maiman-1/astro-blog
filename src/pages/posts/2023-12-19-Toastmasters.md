@@ -23,7 +23,21 @@ Upon finishing my studies, I had nothing to do, and my brother persuaded me to c
 
 Having all the ports needed for the meeting, the setup for the meeting went smoothly, and most everyone agreed that the overall experience was positive for both the physical attendees and the online attendees. This is much to the chagrin of the previous president, who exclaimed how the setup was much difficult last year. I didn't know what to say other than, it was the right tool for the right job.
 
-# Previous Clubs Experience
+## Previous Clubs Experience
+
+One of the reasons I held off from committing myself to Toastmasters for so long is from my experience with a previous speech-oriented club, which was a debate club. The debate was very competitive, everyone held a culture that you would be excluded from if you disagreed with any of the members, and it was a lot of work trying to just be a member of the club. I was under the assumption at the time that Toastmasters was pretty much going to be ran in the same spirit as this club. A big fear that I had was that the work load related to the club would take a big chunk of my time away from my studies, time that I couldn't afford to take away because I had a scholarship to maintain.
+
+I recognise now that Toastmasters does not force you to take up work that you don't want to and the Toastmasters are often understanding when it comes to your work-life balance. I saw a lot of support given to members who are struggling due to work reasons, and typically people will step up if you say you can't make it for a reason.It definitely was a wasted opportunity for me to disregard Toastmasters for that reason but, it was a choice made due to circumstances at the time.
+
+# My Icebreaker speech reflection
+
+As is tradition in Toastmasters, I had given an icebreaker speech at TMIKL, which was a speech to introduce yourself, and to reaffirm your reasons in joining Toastmasters by declaring it to the members of the club. If I had to say, my icebreaker speech was nothing extraordinary. Compared to the "standards" sets at TMIKL, my speech was kinda bad. It was definitely a learning opportunity for me and I enjoyed giving that speech. Although a lot of people would say this is a bad thing, to fail. I know a lot of people would do whatever it takes to never fail, taking classes after classes, lessons after lessons, and notes after notes to ensure their speech is perfect. In my opinion, circumstances in a speech always changes. Although it feels bad when your speech doesn't go the way you want, you'll just have to deal with it which was something you learn very easily by failing. This wouldn't help you be a good speaker but you'll end up being a more flexible speaker in my opinion.
+
+I learned a lot now about how to make your speech better, by making it more personal, making it into a story, and using a variety of body languages and tonal variety. The last one is really the most important one. Do you know anyone that is so energetic that you want to spend your whole day with them? That is why. Humans are really focused on the body language and tonal variety when we speak, a lot more than we think we do. It is in fact no surprise that these are the most important aspects in telling a story. I learned how to tell better stories and to connect with people a lot better now. Often, when someone calls you weird or creepy, it is because of your body language, something that Toastmasters ended up teaching me more than my parents or my peers ever did, even if it was done unitentionally by me giving speeches.
+
+# Conclusion
+
+Despite only being in Toastmasters for 4 months, I definitely learned a lot from Toastmasters, more than I thought I would. I am not sure about the connections I made in Toastmasters. Connections and networking are one of the things I struggled a lot in life, more than I like to admit. It is my hope that Toastmasters would help me improve in this aspect but I have to admit, Toastmasters is not a therapy group. Toastmasters help you by making you do stuff, and being supportive in you doing so. This has definitely helped in my confidence and abilities. Often, in being good at something, the most difficult step is the first step. It isn't a fast solution, but it is a more rounded solution and I definitely encourage everyone reading this to join Toastmasters.
 
 # References
 
