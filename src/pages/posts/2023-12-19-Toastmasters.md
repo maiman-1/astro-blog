@@ -5,7 +5,7 @@ pubDate:   2023-12-19 00:00:00 +0800
 description: 'After two years of persuasion by my friend, I finally caved in and check what Toastmasters is all about. I went to a test meeting of a new club at the time and was impressed. Then, I went to TMIKL Toastmasters meeting and I was persuaded to finally join the club'
 author: 'Muhammad Aiman Shamsiemon'
 image:
-    url: "/astro-blog/src/asset/me_Speaking.jpg"
+    url: "/astro-blog/assets/me_Speaking.jpg"
     alt: 'Toastmasters AI'
 tags: ["Toastmasters"]
 draft: false
@@ -44,4 +44,3 @@ Despite only being in Toastmasters for 4 months, I definitely learned a lot from
 1. “Toastmasters International History,” Toastmasters.org, 2018. https://www.toastmasters.org/about/history (accessed Dec. 19, 2023).
 2. “TMIKL (51-1997) Kuala Lumpur: History,” TMIKL (51-1997) Kuala Lumpur. https://tmikl.blogspot.com/p/history_22.html (accessed Dec. 19, 2023).
 3. “Club Status,” dashboards.toastmasters.org. https://dashboards.toastmasters.org/ClubReport.aspx?id=00001997 (accessed Dec. 19, 2023).
-4. 
