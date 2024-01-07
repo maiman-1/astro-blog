@@ -1,0 +1,28 @@
+---
+//import components
+import Card from "./Card.astro";
+
+const {prevUrl, nextUrl} = Astro.props;
+---
+<nav class="Blog Pagination grid grid-cols-3 gap-2">
+    <a href={prevUrl &&("/astro-blog"+ prevUrl)}>
+        <button
+            class="btn btn-primary w-full"
+            disabled={!prevUrl}
+        >
+                Previous
+        </button>
+    </a>
+
+    <div></div>
+
+    <a href={nextUrl &&("/astro-blog"+ nextUrl)}>
+        <button
+            class="btn btn-primary w-full"
+            disabled={!nextUrl}
+        >
+            Next
+        </button>
+    </a>
+</nav>
+
