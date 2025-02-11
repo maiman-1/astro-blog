@@ -20,7 +20,7 @@ export async function getStaticPaths({paginate}) {
 
 //console.log("~ AllPosts", allPosts)
 const {page} = Astro.props;
-console.log(page)
+//console.log(page.url)
 ---
 <Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
     <ul>
@@ -37,8 +37,7 @@ console.log(page)
 
         <!--Div for pagination -->
         <Pagination
-            prevUrl={ page.url.prev}
-            nextUrl={ page.url.next}        
+            page={page}
         ></Pagination> 
        
     </ul>

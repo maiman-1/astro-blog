@@ -2,26 +2,61 @@
 //import components
 import Card from "./Card.astro";
 
-const {prevUrl, nextUrl} = Astro.props;
+const {page} = Astro.props;
+
+//console.log(page.lastPage)
 ---
-<nav class="Blog Pagination grid grid-cols-3 gap-2">
-    <a href={prevUrl &&("/astro-blog"+ prevUrl)}>
+<nav class="Blog Pagination md:grid md:grid-cols-7 md:gap-2">
+    <a href={page.url.first &&("/astro-blog"+ page.url.first)}>
         <button
-            class="btn btn-primary w-full"
-            disabled={!prevUrl}
+            class="btn btn-primary"
+            disabled={!page.url.first}
         >
-                Previous
+                First
         </button>
     </a>
 
-    <div></div>
-
-    <a href={nextUrl &&("/astro-blog"+ nextUrl)}>
+    <a href={page.url.prev &&("/astro-blog"+ page.url.prev)}>
         <button
-            class="btn btn-primary w-full"
-            disabled={!nextUrl}
+            class="btn btn-primary"
+            disabled={!page.url.prev}
         >
-            Next
+            ←
+        </button>
+    </a>
+
+    <!--This displays the number -->
+    {Array.from({ length: page.lastPage }, (_, i) => i + 1)
+    .slice(Math.max(0, page.currentPage - 2), Math.min(page.lastPage, page.currentPage + 2))
+    .map(num => (
+        <a href={`/astro-blog/blog/${num === 1 ? "" : num}`}>
+            <button
+            class="btn btn-primary"
+            disabled={num === page.currentPage}
+            >
+                {num}
+            </button>
+        </a>
+    ))
+    }
+
+
+
+    <a href={page.url.next &&("/astro-blog"+ page.url.next)}>
+        <button
+            class="btn btn-primary"
+            disabled={!page.url.next}
+        >
+            →
+        </button>
+    </a>
+
+    <a href={page.url.last &&("/astro-blog"+ page.url.last)}>
+        <button
+            class="btn btn-primary"
+            disabled={!page.url.last}
+        >
+                Last
         </button>
     </a>
 </nav>
