@@ -15,7 +15,7 @@ export function formatDate(date) {
   })
 }
 
-export function formatBlogPosts(posts, {
+export async function  formatBlogPosts(posts, {
   filterDrafts = true,
   filterFuturePosts = true,
   sortByNew = true,
@@ -23,7 +23,27 @@ export function formatBlogPosts(posts, {
   limit = undefined,
   pageStart = 0,
 } = {}){
-  const filteredPosts = posts.reduce((acc, post) => {
+  // due to changes in importing, need to call the invoker function
+  //console.log(posts);
+
+  async function processPosts(posts) {
+    const processedPosts = await Promise.all(
+      Object.entries(posts).map(async ([path, loader]) => {
+        const file = await loader();
+        return {
+            path,
+            ...file
+          }
+        }
+      )
+    );
+    return processedPosts;
+  }
+  
+  const processedPosts = await processPosts(posts)
+
+  const filteredPosts = processedPosts.reduce((acc, post) => {
+    //console.log(post);
     //get date and draft status
     const {pubDate, draft} = post.frontmatter;
     //filter out drafts
@@ -36,8 +56,14 @@ export function formatBlogPosts(posts, {
     return acc;
   }, [])
   //sort by new, research how to sort by old
-  if (sortByNew){
-    filteredPosts.sort((a,b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate))
+  if (sortByNew && sortByOld) {
+    throw new Error('Cannot sort by both "new" and "old" simultaneously.');
+  }
+  if (sortByNew) {
+    filteredPosts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
+  }
+  if (sortByOld) {
+    filteredPosts.sort((a, b) => new Date(a.frontmatter.pubDate) - new Date(b.frontmatter.pubDate));
   }
   //set the limit
   if (typeof limit == "number"){
