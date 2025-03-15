@@ -2,6 +2,9 @@ export function slugify(text) {
     return text
       .toString()
       .toLowerCase()
+      .normalize('NFD') // change normalized charactes
+      .replace(/[\u0300-\u036f]/g, '') // Remove diacritical marks
+      .replace(/[^a-zA-Z0-9\s-]/g, '') // Keep only alphanumeric, spaces, and hyphens
       .replace(/\s+/g, '-')
       .replace(/[^\w-]+/g, '')
       .replace(/--+/g, '-')
@@ -10,9 +13,13 @@ export function slugify(text) {
   }
   
 export function formatDate(date) {
-  return new Date(date).toLocaleDateString('en-UK', {
+  const parsedDate = new Date(date);
+  if (isNaN(parsedDate)) {
+    throw new Error("Invalid Date"); // You can customize this message as needed
+  }
+  return parsedDate.toLocaleDateString('en-UK', {
     timeZone: "UTC",
-  })
+  });
 }
 
 export async function  formatBlogPosts(posts, {
