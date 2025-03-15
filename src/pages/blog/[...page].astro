@@ -1,7 +1,5 @@
 ---
-import type { GetStaticPaths } from "astro";
 import Layout from './../../layouts/Layout.astro';
-import Card from '../../components/Card.astro';
 import PostCard from '../../components/PostCard.astro';
 import Pagination from '../../components/Pagination.astro'
 
@@ -10,8 +8,8 @@ import { formatBlogPosts } from '../../js/utils';
 
 //import all posts with .md
 export async function getStaticPaths({paginate}) {
-    const allPosts = await Astro.glob("./*.md");
-    const formattedPosts = formatBlogPosts(allPosts)
+    const allPosts = import.meta.glob("./*.md");
+    const formattedPosts = await formatBlogPosts(allPosts)
     return paginate(formattedPosts, {
         pageSize: 5,
     })
@@ -19,8 +17,8 @@ export async function getStaticPaths({paginate}) {
 }
 
 //console.log("~ AllPosts", allPosts)
-const {page} = Astro.props;
-//console.log(page.url)
+const {page} = Astro.props as { page: { data: any[] } };
+//console.log(Astro.props)
 ---
 <Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
     <ul>
