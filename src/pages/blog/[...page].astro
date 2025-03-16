@@ -1,10 +1,16 @@
 ---
 import Layout from './../../layouts/Layout.astro';
 import PostCard from '../../components/PostCard.astro';
-import Pagination from '../../components/Pagination.astro'
+import Pagination from '../../components/Pagination.astro';
+import SelectSort from '../../components/selectSort.astro';
 
 //utils
 import { formatBlogPosts } from '../../js/utils';
+
+//Handle selecting sorting option
+const handleValueChange = (value) => {
+    console.log("Selected Value from Child:", value)
+};
 
 //import all posts with .md
 export async function getStaticPaths({paginate}) {
@@ -21,6 +27,12 @@ const {page} = Astro.props as { page: { data: any[] } };
 //console.log(Astro.props)
 ---
 <Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
+    <!--Sort section -->
+    <SelectSort
+        onValueChange={handleValueChange}
+    >
+    </SelectSort>
+
     <ul>
         {
             page.data.map((post) => (
@@ -32,11 +44,11 @@ const {page} = Astro.props as { page: { data: any[] } };
             ))
            
         }
-
-        <!--Div for pagination -->
-        <Pagination
-            page={page}
-        ></Pagination> 
        
     </ul>
+
+        <!--Div for pagination -->
+    <Pagination
+        page={page} 
+    ></Pagination> 
 </Layout>
