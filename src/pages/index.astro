@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro'
+import Card from '../components/Card.astro';
+import GitHubCommitCalendar from '../components/githubCommits.jsx';
 
 import PostCard from '../components/PostCard.astro';
 
@@ -24,6 +25,9 @@ const formattedPosts = await formatBlogPosts(allPosts, {limit:4})
 			Greetings! This website serves as a replacement for my previous blog site. I've been on the lookout for a platform that can be hosted and deployed on Github Pages, and imagine my surprise when I stumbled upon the magic of Astro Blog! After going through the deployment steps for Github Pages, I was immediately hooked.
 		</div>
 	</div>
+
+	<!--Show commit dates -->
+	<GitHubCommitCalendar client:load username="maiman-1" repo="astro-blog"/>
 
 	<!--Navigation links -->
 	<div class="drawer-content bg-base-100 my-10">
