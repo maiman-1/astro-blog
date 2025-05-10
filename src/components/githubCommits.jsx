@@ -63,7 +63,7 @@ const GitHubCommitCalendar = ({ username, repo }) => {
 
     for (let d = new Date(startDate); d <= nowDate; d.setDate(d.getDate() + 1)){
         const currentDate= d.toISOString().split('T')[0];
-        console.log(currentDate);
+        //console.log(currentDate);
         const commitCount = commitData[currentDate] || 0;
         calendarDays.push(commitCount);
     }
@@ -74,9 +74,9 @@ const GitHubCommitCalendar = ({ username, repo }) => {
         className="calendar-day"
         style={{
           backgroundColor: getColorByCommitCount(commitCount),
-          width: '20px',
-          height: '20px',
-          margin: '2px',
+          width: '1rem',
+          height: '1rem',
+          margin: '0.1rem',
         }}
       >
         <span>{commitCount > 0 ? commitCount : ''}</span>
@@ -103,10 +103,24 @@ const GitHubCommitCalendar = ({ username, repo }) => {
   };
 
   return (
-    <div>
-      <h3>GitHub Commit Calendar for {new Date().getFullYear()}</h3>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div className="calendar-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(52, 1fr)', gap: '5px' }}>
+    <div className="hidden sm:block sm:p-4 sm:max-w-6xl sm:mx-auto">
+      <h3 className="text-2xl font-semibold text-center mb-6">
+        GitHub Commit Calendar for the year
+      </h3>
+  
+      {error && (
+        <p className="text-red-500 text-center mb-4">
+          {error}
+        </p>
+      )}
+  
+      <div
+        className="grid gap-2"
+        style={{
+          gridTemplateColumns: 'repeat(26, minmax(0, 1fr))',
+          margin: "1rem"
+        }}
+      >
         {renderCalendar()}
       </div>
     </div>
