@@ -1,0 +1,42 @@
+---
+import Layout from './../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.astro';
+import Pagination from '../../components/Pagination.astro'
+
+//utils
+import { formatBlogPosts } from '../../js/utils';
+
+//import all posts with .md
+export async function getStaticPaths({paginate}) {
+    const allPosts = import.meta.glob("./*.md");
+    const formattedPosts = await formatBlogPosts(allPosts)
+    return paginate(formattedPosts, {
+        pageSize: 5,
+    })
+
+}
+
+//console.log("~ AllPosts", allPosts)
+const {page} = Astro.props as { page: { data: any[] } };
+//console.log(Astro.props)
+---
+<Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
+    <ul>
+        {
+            page.data.map((post) => (
+            <PostCard 
+                frontmatter={post.frontmatter}
+                post_url={post.url}
+            >
+            </PostCard>
+            ))
+           
+        }
+
+        <!--Div for pagination -->
+        <Pagination
+            page={page}
+        ></Pagination> 
+       
+    </ul>
+</Layout>
