@@ -24,9 +24,13 @@ const { title = SITE_TITLE, description=SITE_DESCRIPTION, sideBarActiveItemID, i
 		<div class="bg-base-100 drawer lg:drawer-open">
 			<input id="my-drawer" type="checkbox" class="drawer-toggle" />
 			<div class="drawer-content bg-base-100">
-					<Header></Header>
+					<Header>
+					</Header>
 				<div class="md:flex md:justify-center">
 					<main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
+						<h1 class="flex justify-center text-4xl font-bold text-primary mb-6">
+							{title}
+						</h1 >
 						<slot>
 							Default Text
 						</slot>

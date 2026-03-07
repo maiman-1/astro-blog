@@ -29,9 +29,10 @@ export async function getStaticPaths({paginate}) {
 
 //console.log("~ AllPosts", allPosts)
 const {page} = Astro.props as { page: { data: any[] } };
+const {tags} = Astro.params;
 //console.log(Astro.props)
 ---
-<Layout title="Blogs" description='Blogs' sideBarActiveItemID='blog'>
+<Layout title={`Posts tagged with "${tags}"`} description='Blogs' sideBarActiveItemID='blog'>
     <ul>
         {
             page.data.map((post) => (
