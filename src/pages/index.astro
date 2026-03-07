@@ -9,7 +9,8 @@ import PostCard from '../components/PostCard.astro';
 import { formatBlogPosts } from '../js/utils';
 
 //import all posts with .md and take the latest 3
-const allPosts = import.meta.glob("./blog/*.md");
+const allPosts = Object.values(import.meta.glob("./blog/posts/*.md", {eager: true}));
+//console.log("~ allPosts", allPosts)
 const formattedPosts = await formatBlogPosts(allPosts, {limit:4})
 //console.log(formattedPosts)
 ---
