@@ -103,6 +103,7 @@ export async function  formatBlogPosts(posts, {
   if (sortByOld) {
     filteredPosts.sort((a, b) => new Date(a.frontmatter.pubDate) - new Date(b.frontmatter.pubDate));
   }
+  //console.log("~ filteredPosts", filteredPosts)
   //set the limit
   if (typeof limit == "number"){
     //slice from page start to page start + limit
