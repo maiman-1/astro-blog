@@ -14,7 +14,9 @@ const {url, alt} = image;
 			<a href={post_url}><h2 class="card-title">{title}</h2></a>
 			{
 				tags.map((tag) => (
-					<div class="badge badge-primary">{tag}</div>
+					<a href={`/astro-blog/tags/${slugify(tag)}`}>
+						<div class="badge badge-primary">{tag}</div>
+					</a>
 				))
 			}
 		</div>

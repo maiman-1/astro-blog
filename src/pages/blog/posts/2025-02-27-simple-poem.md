@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "Simple Poem"
 pubDate:   2025-02-27 00:00:00 +0800
 description: 'Here''s a simple poem because I ran out of ideas on what to write'

@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "Finished with my studies. What's Next?"
 pubDate:   2023-09-02 00:00:00 +0800
 description: 'It has been a while. So many has changed in the world of IT in the last year after the release of the some of the amazing Language Processing Artificial intelligence, like the Chat Generative Pre-trained Transformer (GPT). I have been busy with so many live changes during the past year -  I have moved and I did my internship. Most of all.... I finished my study without updating this site. OOPS!'

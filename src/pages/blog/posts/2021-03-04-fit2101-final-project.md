@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "FIT2101 Final Project"
 pubDate:   2021-03-04 12:00:00 +0800
 description: 'In my second year of Software Engineering studies, I embraced AGILE Scrum principles in FIT2101, leading a team project to develop a project management tool for lecturers using Trello and Git. As the QA tester, I ensured project requirements were met and reflected on the potential benefits of incorporating unit testing.'
@@ -41,7 +41,7 @@ progress. Trello made this easier since the tasks can be made into cards which
 can be dragged to different boards based on their categories. The picture below
 shows how the board looks like at the end of the project.
 
-![Picture of finished trello board](../../asset/screenshot-trello.png)
+![Picture of finished trello board](./../../../asset/screenshot-trello.png)
 
 We also used git with quite a bit of branches since 5 members are involved in
 the team. At the end of the day, we were able to complete a workable product.

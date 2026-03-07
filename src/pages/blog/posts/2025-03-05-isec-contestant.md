@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "TMIKL International Speech and Evaluation Contest (ISEC) 2024-2025!"
 pubDate:   2025-03-05 00:00:00 +0800
 description: 'I participated in the 2024-2025 term''s contest for TMIKL ISEC as both a speaker and an evaluator! '

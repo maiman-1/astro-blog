@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "A Taste of Toastmasters"
 pubDate:   2023-12-19 00:00:00 +0800
 description: 'After two years of persuasion by my friend, I finally caved in and check what Toastmasters is all about. I went to a test meeting of a new club at the time and was impressed. Then, I went to TMIKL Toastmasters meeting and I was persuaded to finally join the club'
