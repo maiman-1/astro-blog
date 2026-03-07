@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "One Year at Principal"
 pubDate:   2025-02-10 00:00:00 +0800
 description: 'Hey there. It''s been one year! I'' been busy with my new job and family. Never too late to update again. Yes. I got a job'

@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "TNG Collaboration Event"
 pubDate:   2025-03-03 00:00:00 +0800
 description: 'Last year, I was the Organizing Chair for the TMIKL x TNG Toastmasters Meeting. As TNG is a big clug, a lot of big names were there...'

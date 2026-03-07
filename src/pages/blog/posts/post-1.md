@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "First Jekyll Post (Now first Astro Post)"
 pubDate:   2021-02-21 13:20:09 +0800
 description: 'This is the first post of my new Astro blog.'

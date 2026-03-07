@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "Cruising to Singapore"
 pubDate:   2025-03-02 00:00:00 +0800
 description: 'Last year, I took a ship to Singapore and here''s how it went!'

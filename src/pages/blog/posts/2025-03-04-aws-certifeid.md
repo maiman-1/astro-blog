@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "AWS Certifed Cloud Practitioner!"
 pubDate:   2025-03-04 00:00:00 +0800
 description: 'I can''t believe I got the AWS Certified Cloud Practitioner despite doing it at the last minute and only studying for two weeks!'
