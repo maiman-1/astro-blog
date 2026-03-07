@@ -34,20 +34,51 @@ export async function  formatBlogPosts(posts, {
   //console.log(posts);
 
   async function processPosts(posts) {
+    /*
+      {
+      path: './2021-03-04-fit2101-final-project.md',
+      frontmatter: {
+        layout: './../../layouts/PostLayout.astro',
+        title: 'FIT2101 Final Project',
+        pubDate: '2021-03-04 12:00:00 +0800',
+        description: 'In my second year of Software Engineering studies, I embraced AGILE Scrum principles in FIT2101, leading a team project to develop a project management tool for lecturers using Trello and Git. As the QA tester, I ensured project requirements were met and reflected on the potential benefits of incorporating unit testing.',
+        author: 'Muhammad Aiman Shamsiemon',
+        image: [Object],
+        tags: [Array],
+        draft: false
+      },
+      file: 'C:/Users/maima/OneDrive/Desktop/code/astro-blog/src/pages/blog/2021-03-04-fit2101-final-project.md',
+      url: '/astro-blog/blog/2021-03-04-fit2101-final-project',
+      rawContent: [Function: rawContent],
+      compiledContent: [AsyncFunction: compiledContent],
+      getHeadings: [Function: getHeadings],
+      Content: [Function (anonymous)] {
+        isAstroComponentFactory: true,
+        moduleId: undefined,
+        propagation: undefined
+      },
+      default: [Function (anonymous)] {
+        isAstroComponentFactory: true,
+        moduleId: undefined,
+        propagation: undefined
+      }
+    }
+    */
+
     const processedPosts = await Promise.all(
-      Object.entries(posts).map(async ([path, loader]) => {
-        const file = await loader();
-        return {
-            path,
-            ...file
+      posts.map((post) => {
+        //console.log("~ post", post)
+          return {
+              ...post,
+              path: './'+ post.url.split("/")[3]
           }
-        }
-      )
+      })
     );
     return processedPosts;
   }
   
   const processedPosts = await processPosts(posts)
+  //console.log(Object.entries(posts))
 
   const filteredPosts = processedPosts.reduce((acc, post) => {
     //console.log(post);
@@ -72,6 +103,7 @@ export async function  formatBlogPosts(posts, {
   if (sortByOld) {
     filteredPosts.sort((a, b) => new Date(a.frontmatter.pubDate) - new Date(b.frontmatter.pubDate));
   }
+  //console.log("~ filteredPosts", filteredPosts)
   //set the limit
   if (typeof limit == "number"){
     //slice from page start to page start + limit

@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "Algorithm and Data Structures"
 pubDate:   2021-05-31 00:00:00 +0800
 description: 'I think the subject that most students dread to learn, at least among my friends, is algorithm. FIT2004: Algorithm and Data Structure requires more practical knowledge and experience to pass unlike most other units. In some aspect, I think learning algorithms is harder than learning any other skills because it is a practical skill that cant really be taught by just reading about it.'
