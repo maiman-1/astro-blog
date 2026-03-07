@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "Foods in Kelantan that Are Actually Good"
 pubDate:   2025-02-28 00:00:00 +0800
 description: 'Typically, when you think about Kelantan, you would only think of Nasi Kerabu or perhaps, Nasi Dagang. Honestly, those two foods are quite overrated. Here are some food that I actually miss from Kelantan'

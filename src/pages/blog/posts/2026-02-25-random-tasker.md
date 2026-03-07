@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "February 2026 Updates"
 pubDate:   2026-02-24 00:00:00 +0800
 description: 'New Years Resolution - New System'

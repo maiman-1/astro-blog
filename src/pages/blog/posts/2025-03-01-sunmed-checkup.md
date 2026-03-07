@@ -1,5 +1,5 @@
 ---
-layout: "./../../layouts/PostLayout.astro"
+layout: "./../../../layouts/PostLayout.astro"
 title:  "Sunway Medical Center Checkup"
 pubDate:   2025-03-01 00:00:00 +0800
 description: 'I recently got a checkup done at Sunway Medical Center. Was it worth it?'
