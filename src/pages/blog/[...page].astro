@@ -8,8 +8,11 @@ import { formatBlogPosts } from '../../js/utils';
 
 //import all posts with .md
 export async function getStaticPaths({paginate}) {
+    const newPosts = Object.values(import.meta.glob("./*.md", {eager: true}));
     const allPosts = import.meta.glob("./*.md");
-    const formattedPosts = await formatBlogPosts(allPosts)
+    //console.log("~ newPosts", newPosts)
+    const formattedPosts = await formatBlogPosts(newPosts)
+    //console.log(allPosts.map((post:any) => post.frontmatter.tags))
     return paginate(formattedPosts, {
         pageSize: 5,
     })
