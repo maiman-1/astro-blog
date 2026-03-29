@@ -11,4 +11,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Raise issue or email me at maimansham@gmail.com
+Raise issue or email me at maimansham.dev@gmail.com
