@@ -3,13 +3,18 @@ import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 
 export default [
-  ...eslintPluginAstro.configs.recommended,
+  // Astro recommended rules
+  ...eslintPluginAstro.configs["flat/recommended"],
+
+  // Typescript config for TS/JS Files
   {
+    files: ["**/*.ts", "**/*.js"],
     languageOptions: {
-      parser: tsParser, // Use TypeScript parser
+      parser: tsParser,
       parserOptions: {
-        extraFileExtensions: [".astro"],
-      },
+        ecmaVersion: "latest",
+        sourceType: "module",
+      }
     },
     plugins: {
       "@typescript-eslint": tsPlugin
@@ -20,5 +25,5 @@ export default [
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "no-console": "off"
     }
-  }
+  },
 ];
