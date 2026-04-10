@@ -2,7 +2,7 @@
 import {slugify, formatDate} from "./../js/utils"
 const { frontmatter, post_url } = Astro.props;
 //extract frontmatter
-const {title, pubDate, description, author, image, tags, draft} = frontmatter
+const {title, pubDate, description, author, image, tags, draft}  = frontmatter
 const {url, alt} = image;
 
 //console.log("~post", url)
@@ -13,7 +13,7 @@ const {url, alt} = image;
 		<div class="card-title">
 			<a href={post_url}><h2 class="card-title">{title}</h2></a>
 			{
-				tags.map((tag) => (
+				tags.map((tag: string[]) => (
 					<a href={`/astro-blog/tags/${slugify(tag)}`}>
 						<div class="badge badge-primary">{tag}</div>
 					</a>
