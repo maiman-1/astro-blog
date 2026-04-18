@@ -5,7 +5,7 @@ import {slugify, formatDate} from "../js/utils"
 const {frontmatter} = Astro.props
 
 const {title, pubDate, description, author, image, tags, draft} = frontmatter
-const {url, alt} = image;
+const {url, alt} = image ?? {};
 ---
 
 <Layout title={title} description={description} sideBarActiveItemID="article">
@@ -20,7 +20,9 @@ const {url, alt} = image;
         <!--Hero for the title part -->
         <div class="hero h-1/2 bg-neutral shadow-xl mb-10 ring-1 ring-white ring-inset">
             <div class="hero-content flex-col lg:flex-row">
-                <img src={url} class="object-scale-down p-4 md:w-1/2 rounded-lg" />
+                {
+                    image && <img src={url} class="object-scale-down p-4 md:w-1/2 rounded-lg" />
+                }
                 <div class="md:w-1/2">
                     {frontmatter.tags && frontmatter.tags.map((tag: string) => (
                         <a href={`/astro-blog/tags/${slugify(tag)}`}>
@@ -29,7 +31,7 @@ const {url, alt} = image;
                     ))}
                     <h1 class="text-5xl font-bold">{title}</h1>
                     <p class="py-6">by <a href="/astro-blog/about/">{slugify(author)}</a></p>
-                    <p class="py-6">{formatDate(pubDate)}</a></p>
+                    <p class="py-6">{formatDate(pubDate)}</p>
                 </div>
             </div>
         </div>
