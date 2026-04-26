@@ -7,3 +7,35 @@ updates:
     pull-request-branch-name:
       separator: "/"
     target-branch: "staging"
+
+    groups:
+      eslint:
+        patterns:
+          - "eslint*"
+          - "@typescript-eslint/*"
+
+      testing:
+        patterns:
+          - "vitest*"
+          - "jsdom*"
+          - "jest"
+          - "@testing-library/*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+      
+      - name: Run build
+        run: npm run build
