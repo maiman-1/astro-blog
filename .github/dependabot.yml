@@ -7,3 +7,26 @@ updates:
     pull-request-branch-name:
       separator: "/"
     target-branch: "staging"
+
+    groups:
+      eslint:
+        patterns:
+          - "eslint*"
+          - "@typescript-eslint/*"
+
+      testing:
+        patterns:
+          - "vitest*"
+          - "jsdom*"
+          - "jest"
+          - "@testing-library/*"
+      
+      ui:
+        patterns:
+          - "daisyui*"
+          - "tailwindcss*"
+
+      minor-patches:
+        update-types: 
+          - "patch"
+          - "minor"
