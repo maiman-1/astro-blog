@@ -1,13 +1,13 @@
 import { defineConfig } from 'astro/config';
-
-import tailwind from "@astrojs/tailwind";
-
 import react from '@astrojs/react';
-
+import tailwindcss from '@tailwindcss/vite'; // Import the Vite plugin
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://maiman-1.github.io',
   base: '/astro-blog',
-  integrations: [ tailwind(), react()]
+  integrations: [ react()],
+  vite: {
+    plugins: [tailwindcss()], // Add the Tailwind CSS plugin to Vite
+  },
 });
