@@ -12,9 +12,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.4",
+    "@astrojs/react": "^5.0.5",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.18.1",
+    "astro": "^6.3.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sharp": "^0.34.5",
