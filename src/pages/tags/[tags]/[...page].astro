@@ -8,7 +8,7 @@ import Filter from '../../../components/Filter.astro';
 import { formatBlogPosts } from './../../../js/utils';
 
 //import all posts with .md
-export async function getStaticPaths({paginate}) {
+export async function getStaticPaths({paginate} : {paginate: any}) {
     const newPosts = Object.values(import.meta.glob("./../../blog/posts/*.md", {eager: true}));
     //const allPosts = import.meta.glob("./*.md");
     //console.log("~ newPosts", newPosts)
