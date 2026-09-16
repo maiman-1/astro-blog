@@ -11,7 +11,7 @@ import { formatBlogPosts } from '../js/utils';
 //import all posts with .md and take the latest 3
 const allPosts = Object.values(import.meta.glob("./blog/posts/*.md", {eager: true}));
 //console.log("~ allPosts", allPosts)
-const formattedPosts = await formatBlogPosts(allPosts, {limit:4})
+const formattedPosts = await formatBlogPosts(allPosts, {limit:4} as {limit: number});
 //console.log(formattedPosts)
 ---
 
@@ -53,7 +53,7 @@ const formattedPosts = await formatBlogPosts(allPosts, {limit:4})
 	<div class="drawer-content bg-base-100">
 		<h2 class="text-2xl text-primary">Newest Posts</h2>
 		<ul role="list" class="grid grid-cols-1 gap-4">
-			{formattedPosts.map((post)=>(
+			{formattedPosts.map((post: { url: string; frontmatter: { title: string; description: string } })=>(
 				<Card
 					href={post.url}
 					title={post.frontmatter.title}
