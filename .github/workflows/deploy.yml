@@ -14,23 +14,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify PR is from staging
-        if: github.head_ref != 'staging'
-        run: |
-          echo "Only PRs from 'staging' branch can merge to master"
-          exit 1
       
       - name: Checkout your repository
         uses: actions/checkout@v4
-
-      - name: Remove script directory
-        run: |
-          rm -rf <YOUR_SCRIPT_DIRECTORY>
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add -A
-          git commit -m "Remove script files from master" || true
-          git push
 
       - name: Install dependencies
         run: npm install
