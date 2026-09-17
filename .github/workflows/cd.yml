@@ -1,0 +1,46 @@
+name: Prepare staging PR for master
+
+on:
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-remove-scripts:
+    # Only operate on a staging → master PR
+    if: github.head_ref == 'staging'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Check out the PR branch, not GitHub's temporary merge commit
+          ref: ${{ github.head_ref }}
+
+      - name: Remove scripts directory
+        run: |
+          rm -rf scripts
+
+      - name: Commit deletion to staging
+        run: |
+          if git diff --quiet; then
+            echo "No script files to remove."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: remove script files"
+          git push
+
+  reject-other-source-branches:
+    if: github.head_ref != 'staging'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Only PRs from staging may merge into master."
+          exit 1
