@@ -32,3 +32,18 @@ code {
 body {
     margin: 0;
 }
+
+/* Markdown content rendered inside blog posts. */
+.post-content blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 0.25rem solid var(--color-primary, #7c3aed);
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: var(--color-base-200, #1f2937);
+    color: var(--color-base-content, inherit);
+    font-style: italic;
+}
+
+.post-content blockquote p {
+    margin: 0;
+}

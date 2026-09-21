@@ -21,7 +21,7 @@ image:
     url: "/astro-blog/favicon.png"
     alt: 'The full Astro logo.'
 tags: []
-draft: false
+draft: true
 ---
 `
 
