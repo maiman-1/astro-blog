@@ -30,7 +30,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v4
         with:
-          node-version: 22 # Specify the Node.js version
+          node-version: 24 # Specify the Node.js version
           # package-manager: npm@latest # Optional: specify your package manager
 
   deploy:
