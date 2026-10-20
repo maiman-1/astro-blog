@@ -1,7 +1,7 @@
 {
   "name": "astro-blog",
   "type": "module",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,6 +11,9 @@
     "test": "vitest",
     "lint": "eslint .",
     "new post": "node scripts/new-post.js"
+  },
+  "engines": {
+    "node": "<=24.22.0"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.0",
