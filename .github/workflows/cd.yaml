@@ -38,7 +38,7 @@ jobs:
           git push
 
   reject-other-source-branches:
-    if: github.head_ref != 'staging'
+    if: github.head_ref != 'staging' && github.event.pull_request.user.login!='dependabot[bot]' 
     runs-on: ubuntu-latest
     steps:
       - run: |
